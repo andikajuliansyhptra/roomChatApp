@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Real-Time</title>
+    <!-- Firebase SDK (Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2>roomChat kita</h2>
+      <button onclick="logout()">Logout</button>
+    </header>
+    <!-- Form Login -->
+    <div id="loginForm">
+      <h2>Daftar</h2>
+      <p class="text">jika belum punya akun</p>
+      <input type="email" id="emailInput" placeholder="Email" />
+      <input type="password" id="passwordInput" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button onclick="signUp()">Daftar</button>
+    </div>
+
+    <!-- Chat Room -->
+    <div id="chatRoom" style="display: none">
+      <div id="messages" class="chat-area"></div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Ketik pesan..."
+          onkeypress="handleKeyPress(event)"
+        />
+        <button onclick="sendMessage()">Kirim</button>
+      </div>
+      <p>&copy; Creted by Andika</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/vector-1738162097401-b6778597bf17?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  padding: 0 50px;
+  z-index: 2;
+  background: #f0f2f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* .header {
+  padding: 15px;
+  background: #0084ff;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+header h2 {
+  padding: 0;
+  margin: 10px;
+  font-size: 1.3rem;
+}
+
+.chat-area {
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  max-width: 50%;
+  word-break: break-word;
+  position: relative;
+}
+
+.message.sent {
+  background: #0084ff;
+  color: white;
+  margin-left: auto;
+}
+
+.message.received {
+  background: grey;
+  color: white;
+  margin-right: auto;
+}
+
+.message-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.message:hover .message-actions {
+  display: block;
+}
+
+.input-area {
+  display: flex;
+  padding: 0 30px;
+}
+
+/* copy right */
+p {
+  text-align: center;
+  padding: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ddd;
+}
+
+@media (max-width: 468px) {
+  p {
+    color: black;
+    padding: 8px 0;
+    position: relative;
+    top: 10px;
+  }
+
+  header {
+    padding: 0 20px;
+  }
+
+  button[onclick="logout()"] {
+    padding: x;
+    border: 8px solid #f0f2f5;
+  }
+
+  #loginForm {
+    padding-right: 50px;
+    padding-left: 20px;
+  }
+
+  #loginForm button[onclick="login()"] {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  #loginForm .text {
+    margin-bottom: 10px;
+  }
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  outline-color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  background: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#loginForm {
+  max-width: 300px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+#loginForm h2 {
+  color: #f0f2f5;
+  text-shadow: -3px 5px 3px rgba(0, 0, 0, 0.5);
+  font-size: 36px;
+  margin: 0;
+}
+
+#loginForm p {
+  padding: 0;
+  margin: 0;
+  color: #111;
+  font-weight: bold;
+  text-shadow: 0px 1px 3px #eee;
+  padding: 10px;
+}
+
+#emailInput,
+#passwordInput {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  outline-color: black;
+}
+
+.user-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.logout-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+  padding: 0;
+}
